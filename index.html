@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Superhero Intelligence Database</title>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <h1>Superhero Intelligence Database</h1>
+            <div class="controls">
+                <input type="text" id="search" placeholder="Search heroes...">
+                <select id="pageSize">
+                    <option value="10">10 per page</option>
+                    <option value="20" selected>20 per page</option>
+                    <option value="50">50 per page</option>
+                    <option value="100">100 per page</option>
+                    <option value="all">Show all</option>
+                </select>
+            </div>
+        </header>
+
+        <main>
+            <table id="heroesTable">
+                <thead>
+                    <tr>
+                        <th>Icon</th>
+                        <th>Name</th>
+                        <th>Full Name</th>
+                        <th>Powerstats</th>
+                        <th>Race</th>
+                        <th>Gender</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                        <th>Place of Birth</th>
+                        <th>Alignment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                    <td>test</td>
+                </tbody>
+            </table>
+        </main>
+
+        <footer>
+            <div class="pagination">
+                <button id="prev">Previous</button>
+                <span id="pageInfo"></span>
+                <button id="next">Next</button>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>
