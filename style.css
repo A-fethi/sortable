@@ -13,6 +13,13 @@ body {
     min-height: 100vh;
 }
 
+pre {
+    font-family: inherit;
+    font-size: inherit;    
+    word-wrap: break-word; 
+    margin: 0;             
+  }
+
 #app {
     justify-content: center;  
     align-items: center;      
