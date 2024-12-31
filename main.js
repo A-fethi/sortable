@@ -144,10 +144,10 @@ export const sortHeroes = (heroes) => {
                     const sortedNames = heroes.sort((a, b) => a.name.localeCompare(b.name));
                     tbody.innerHTML = "";
                     if (sorted) {
-                        Display(sortedNames.reverse());
+                        Display(sortedNames)
                         sorted = false
                     } else {
-                        Display(sortedNames)
+                        Display(sortedNames.reverse());
                         sorted = true
                     }
                     break;
@@ -155,10 +155,10 @@ export const sortHeroes = (heroes) => {
                     const sortedFullName = heroes.sort((a, b) => a.biography.fullName.localeCompare(b.biography.fullName));
                     tbody.innerHTML = "";
                     if (sorted) {
-                        Display(sortedFullName.reverse());
+                        Display(sortedFullName)
                         sorted = false
                     } else {
-                        Display(sortedFullName)
+                        Display(sortedFullName.reverse());
                         sorted = true
                     }
                     break;
@@ -170,10 +170,10 @@ export const sortHeroes = (heroes) => {
                     const sortedPowerstats = heroes.sort((a, b) => a.powerstatsSum - b.powerstatsSum);
                     tbody.innerHTML = "";
                     if (sorted) {
-                        Display(sortedPowerstats.reverse());
+                        Display(sortedPowerstats)
                         sorted = false
                     } else {
-                        Display(sortedPowerstats)
+                        Display(sortedPowerstats.reverse());
                         sorted = true
                     }
                     break;
@@ -181,10 +181,10 @@ export const sortHeroes = (heroes) => {
                     const sortedRace = heroes.sort((a, b) => a.appearance.race.localeCompare(b.appearance.race));
                     tbody.innerHTML = "";
                     if (sorted) {
-                        Display(sortedRace.reverse());
+                        Display(sortedRace)
                         sorted = false
                     } else {
-                        Display(sortedRace)
+                        Display(sortedRace.reverse());
                         sorted = true
                     }
                     break;
@@ -192,10 +192,10 @@ export const sortHeroes = (heroes) => {
                     const sortedGender = heroes.sort((a, b) => a.appearance.gender.localeCompare(b.appearance.gender));
                     tbody.innerHTML = "";
                     if (sorted) {
-                        Display(sortedGender.reverse());
+                        Display(sortedGender)
                         sorted = false
                     } else {
-                        Display(sortedGender)
+                        Display(sortedGender.reverse());
                         sorted = true
                     }
                     break;
@@ -203,10 +203,10 @@ export const sortHeroes = (heroes) => {
                     const sortedHeight = heroes.sort((a, b) => a.appearance.height.localeCompare(b.appearance.height));
                     tbody.innerHTML = "";
                     if (sorted) {
-                        Display(sortedHeight.reverse());
+                        Display(sortedHeight)
                         sorted = false
                     } else {
-                        Display(sortedHeight)
+                        Display(sortedHeight.reverse());
                         sorted = true
                     }
                     break;
@@ -214,10 +214,10 @@ export const sortHeroes = (heroes) => {
                     const sortedWeight = heroes.sort((a, b) => a.appearance.weight.localeCompare(b.appearance.weight));
                     tbody.innerHTML = "";
                     if (sorted) {
-                        Display(sortedWeight.reverse());
+                        Display(sortedWeight)
                         sorted = false
                     } else {
-                        Display(sortedWeight)
+                        Display(sortedWeight.reverse());
                         sorted = true
                     }
                     break;
@@ -225,10 +225,10 @@ export const sortHeroes = (heroes) => {
                     const sortedPoB = heroes.sort((a, b) => a.biography.placeOfBirth.localeCompare(b.biography.placeOfBirth));
                     tbody.innerHTML = "";
                     if (sorted) {
-                        Display(sortedPoB.reverse());
+                        Display(sortedPoB)
                         sorted = false
                     } else {
-                        Display(sortedPoB)
+                        Display(sortedPoB.reverse());
                         sorted = true
                     }
                     break;
@@ -236,10 +236,10 @@ export const sortHeroes = (heroes) => {
                     const sortedAlignment = heroes.sort((a, b) => a.biography.alignment.localeCompare(b.biography.alignment));
                     tbody.innerHTML = "";
                     if (sorted) {
-                        Display(sortedAlignment.reverse());
+                        Display(sortedAlignment)
                         sorted = false
                     } else {
-                        Display(sortedAlignment)
+                        Display(sortedAlignment.reverse());
                         sorted = true
                     }
                     break;
