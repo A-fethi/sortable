@@ -13,7 +13,15 @@
         <header>
             <h1>Superhero Intelligence Database</h1>
             <div class="controls">
-                <input type="text" id="search" placeholder="Search heroes...">
+                <input type="text" id="search" placeholder="Search by ==>">
+                <select id="searchField">
+                    <option value="name">Name</option>
+                    <option value="biography.fullName">Full Name</option>
+                    <option value="appearance.race">Race</option>
+                    <option value="appearance.gender">Gender</option>
+                    <option value="biography.placeOfBirth">Place of Birth</option>
+                    <option value="biography.alignment">Alignment</option>
+                </select>
                 <select id="pageSize">
                     <option value="10">10 per page</option>
                     <option value="20" selected>20 per page</option>
@@ -54,7 +62,7 @@
             </div>
         </footer>
     </div>
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./sortable.js"></script>
 </body>
 
 </html>
