@@ -89,7 +89,7 @@ function setupSearch() {
 
 function applySearch(query, field) {
     currentHeroes = allHeroes.filter(hero => {
-        const value = getFieldValue(hero, field).toLowerCase();
+        const value = getFieldValue(hero, field).toLowerCase(); 
         return value.includes(query);
     });
     currentPage = 1;
