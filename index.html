@@ -26,7 +26,7 @@
 
         <main>
             <table id="heroesTable">
-                <thead>
+                <thead id="tablehead">
                     <tr>
                         <th>Icon</th>
                         <th>Name</th>
@@ -40,13 +40,16 @@
                         <th>Alignment</th>
                     </tr>
                 </thead>
+                <tbody id="herosTableBody">
+
+                </tbody>
             </table>
         </main>
 
         <footer>
             <div class="pagination">
                 <button id="prev">Previous</button>
-                <span id="pageInfo"></span>
+                <span id="currentPage">1</span>
                 <button id="next">Next</button>
             </div>
         </footer>

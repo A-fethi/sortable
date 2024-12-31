@@ -22,13 +22,13 @@ export function prevPage(heroes) {
     
     const prev = document.getElementById('prev');
     prev.addEventListener('click', function () {
-        const table = document.getElementById('heroesTable');
+        const tbody = document.getElementById('herosTableBody')
         const pageSize = document.getElementById('pageSize');
         const currentPage = document.getElementById('currentPage');
         let num = pageSize.value;
         let page = currentPage.textContent;
         if (page > 1) {
-            table.innerHTML = "";
+            tbody.innerHTML = "";
             const start = (page - 2) * num;
             Display(heroes.slice(start), num);
             currentPage.textContent = page - 1;
@@ -39,13 +39,13 @@ export function prevPage(heroes) {
 export function nextPage(heroes) {
     const next = document.getElementById('next');
     next.addEventListener('click', function () {
-        const table = document.getElementById('heroesTable');
+        const tbody = document.getElementById('herosTableBody')
         const pageSize = document.getElementById('pageSize');
         const currentPage = document.getElementById('currentPage');
         let num = pageSize.value;
         let page = currentPage.textContent;
         if (page < heroes.length / num) {
-            table.innerHTML = "";
+            tbody.innerHTML = "";
             const start = (page * num);
             Display(heroes.slice(start, start + num), num);
             currentPage.textContent = +page + 1;
@@ -55,18 +55,20 @@ export function nextPage(heroes) {
 export function Display(heroes, num = 20) {
     let checker = 0;
     const table = document.getElementById('heroesTable');
+     const tbody = document.getElementById('herosTableBody')
     const pageSize = document.getElementById('pageSize')
     pageSize.addEventListener('change', function () {
-        table.innerHTML = "";
+        tbody.innerHTML = "";
         Display(heroes, pageSize.value);
     }); 
+
     heroes.forEach(function (hero) {
         if (checker >= num) {
             return;
         }
         const row = document.createElement("tr"); 
         row.classList.add(`hero-${hero.id}`); 
-        table.appendChild(row); 
+        tbody.appendChild(row); 
 
         const imageCell = document.createElement("td"); 
         imageCell.innerHTML = `<img src="${hero.images.xs}" alt="${hero.name}">`;
@@ -113,9 +115,13 @@ export function Display(heroes, num = 20) {
 
 export const searchHeroes = (heroes) => {
     let input = document.getElementById("search")
+    const tbody = document.getElementById('herosTableBody')
     input.addEventListener('input', function () {
         const filter = input.value.toLowerCase()
+        console.log(filter);
         const filteredHeroes = heroes.filter(hero => hero.name.toLowerCase().includes(filter));
+        console.log(filteredHeroes);
+        tbody.innerHTML = ""
         Display(filteredHeroes)
     });
 }
